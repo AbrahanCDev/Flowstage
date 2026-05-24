@@ -6,12 +6,13 @@
     <title>Checkout | Flowstage</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Syncopate:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="../style.css"> <!-- Reutilizamos estilos globales -->
+    
+    <link rel="stylesheet" href="../style.css"> 
     <link rel="stylesheet" href="checkout.css">
 </head>
 <body class="checkout-page">
 
-<header class="checkout-header">
+    <header class="checkout-header">
         <div class="container">
             <nav>
                 <a href="../index.html" class="back-link">
@@ -19,13 +20,12 @@
                 </a>
             </nav>
         </div>
- </header>
-    
+    </header>
+
     <main class="container section-padding">
         <h1 class="section-title">Finalizar Compra</h1>
 
         <div class="checkout-grid">
-            <!-- COLUMNA IZQUIERDA: FORMULARIO -->
             <section class="checkout-form">
                 <form id="purchase-form">
                     <div class="form-group">
@@ -59,14 +59,12 @@
                 </form>
             </section>
 
-            <!-- COLUMNA DERECHA: RESUMEN -->
             <aside class="order-summary">
                 <div class="summary-card">
                     <h3>Resumen del pedido</h3>
                     <div class="cart-items" id="cart-items-list">
-                        <!-- Los items se cargarán por JS o puedes dejarlos estáticos para la demo -->
                         <div class="item-mini">
-                            <img src="Imagenes/el_baifo_quevedo.png" class="vinyl-img" alt="Vinyl 2">
+                            <img src="../Imagenes/el_baifo_quevedo.png" class="vinyl-img" alt="Vinyl 2">
                             <div class="item-info">
                                 <p>El Baifo - Quevedo</p>
                                 <span>29.99€</span>
@@ -94,13 +92,12 @@
         </div>
     </main>
 
-    <!-- MODAL DE ÉXITO (Oculto inicialmente) -->
     <div id="success-modal" class="modal">
         <div class="modal-content">
             <i class="fas fa-check-circle"></i>
             <h2>¡Pedido Confirmado!</h2>
             <p>Gracias por confiar en Flowstage. Tu música va de camino a Jerez.</p>
-            <a href="index.html" class="btn btn-primary">Volver al inicio</a>
+            <a href="../index.html" class="btn btn-primary">Volver al inicio</a>
         </div>
     </div>
 

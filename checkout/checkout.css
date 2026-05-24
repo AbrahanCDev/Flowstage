@@ -10,9 +10,9 @@ h1.section-title {
     -webkit-text-fill-color: transparent;
 }
 
-/* FONDO DE LA PÁGINA (Corregido) */
+/* FONDO DE LA PÁGINA */
 .checkout-page {
-    background-color: var(--bg-dark); /* Adiós al gris, vuelve el modo oscuro */
+    background-color: var(--bg-dark); /* Vincula directamente tu variable del modo oscuro */
 }
 
 /* HEADER ESPECÍFICO DE CHECKOUT */
@@ -62,7 +62,7 @@ h1.section-title {
 }
 
 .summary-card {
-    border-color: var(--accent-purple); /* Toque neón al resumen */
+    border-color: var(--accent-purple); /* Borde de neón para destacar el total */
     position: sticky;
     top: 120px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
@@ -99,8 +99,8 @@ h1.section-title {
 input {
     width: 100%;
     font-family: 'Inter', sans-serif;
-    background: #0a0a0a;
-    border: 1px solid #333;
+    background: #0d0d0d;
+    border: 1px solid #222;
     padding: 15px;
     border-radius: 8px;
     color: white;
@@ -146,6 +146,7 @@ input::placeholder {
     position: absolute;
     left: 15px;
     color: var(--text-dim);
+    z-index: 3;
 }
 
 .card-input input {
@@ -163,6 +164,66 @@ input::placeholder {
 .payment-box input {
     margin-bottom: 0 !important;
 }
+
+/* ELEMENTOS DEL RESUMEN (ESTILOS NUEVOS DE UNIFICACIÓN) */
+.cart-items { 
+    margin-bottom: 25px; 
+}
+
+.item-mini {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 12px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.item-mini .vinyl-img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.item-info p {
+    font-weight: 700;
+    color: white;
+    font-size: 0.95rem;
+}
+
+.item-info span {
+    color: var(--accent-purple);
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+/* TOTALES DEL RESUMEN */
+.summary-totals {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.total-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    color: var(--text-dim);
+}
+
+.total-row.final {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid var(--glass);
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: white;
+}
+
+.free { color: #22c55e; font-weight: 700; }
 
 /* BOTÓN DE CONFIRMAR */
 .btn-large {
@@ -197,34 +258,6 @@ input::placeholder {
     box-shadow: none;
 }
 
-/* TOTALES DEL RESUMEN */
-.cart-items { margin-bottom: 25px; }
-
-.summary-totals {
-    background: rgba(0, 0, 0, 0.2);
-    padding: 20px;
-    border-radius: 12px;
-}
-
-.total-row {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
-    font-size: 0.9rem;
-    color: var(--text-dim);
-}
-
-.total-row.final {
-    margin-top: 15px;
-    padding-top: 15px;
-    border-top: 1px solid var(--glass);
-    font-size: 1.4rem;
-    font-weight: 700;
-    color: white;
-}
-
-.free { color: #22c55e; font-weight: 700; }
-
 /* MODAL */
 .modal {
     display: none;
@@ -254,4 +287,29 @@ input::placeholder {
 /* RESPONSIVE */
 @media (max-width: 992px) {
     .checkout-grid { grid-template-columns: 1fr; }
+}
+/* BOTÓN QUITAR DEL CARRITO */
+.item-mini {
+    position: relative; /* Para poder alinear elementos internos con flex de manera limpia */
+    justify-content: space-between; /* Empuja el botón al extremo derecho */
+}
+
+.btn-remove {
+    background: transparent;
+    border: none;
+    color: #555; /* Color gris oscuro apagado para que no robe protagonismo */
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 50px;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-remove:hover {
+    color: #ef4444; /* Rojo neón de alerta al pasar el cursor */
+    background: rgba(239, 68, 68, 0.1); /* Destello sutil de fondo */
+    transform: scale(1.1); /* Efecto de crecimiento mínimo */
 }
