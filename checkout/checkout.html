@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | Flowstage</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Syncopate:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css"> <!-- Reutilizamos estilos globales -->
+    <link rel="stylesheet" href="checkout.css">
+</head>
+<body class="checkout-page">
+
+    <header>
+        <div class="container">
+            <nav>
+                <a href="../index.html" class="back-link"> Volver a la tienda</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container section-padding">
+        <h1 class="section-title">Finalizar Compra</h1>
+
+        <div class="checkout-grid">
+            <!-- COLUMNA IZQUIERDA: FORMULARIO -->
+            <section class="checkout-form">
+                <form id="purchase-form">
+                    <div class="form-group">
+                        <h3>1. Datos de Envío</h3>
+                        <div class="input-row">
+                            <input type="text" placeholder="Nombre" required>
+                            <input type="text" placeholder="Apellidos" required>
+                        </div>
+                        <input type="text" placeholder="Dirección completa" required>
+                        <div class="input-row">
+                            <input type="text" placeholder="Ciudad (Jerez, etc.)" required>
+                            <input type="text" placeholder="Código Postal" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <h3>2. Pago</h3>
+                        <div class="payment-box">
+                            <div class="card-input">
+                                <i class="far fa-credit-card"></i>
+                                <input type="text" placeholder="0000 0000 0000 0000" maxlength="16" required>
+                            </div>
+                            <div class="input-row">
+                                <input type="text" placeholder="MM/YY" maxlength="5" required>
+                                <input type="text" placeholder="CVC" maxlength="3" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-large">Confirmar Pedido</button>
+                </form>
+            </section>
+
+            <!-- COLUMNA DERECHA: RESUMEN -->
+            <aside class="order-summary">
+                <div class="summary-card">
+                    <h3>Resumen del pedido</h3>
+                    <div class="cart-items" id="cart-items-list">
+                        <!-- Los items se cargarán por JS o puedes dejarlos estáticos para la demo -->
+                        <div class="item-mini">
+                            <img src="https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?auto=format&fit=crop&q=80&w=100" alt="Vinyl">
+                            <div class="item-info">
+                                <p>Midnight City</p>
+                                <span>29.99€</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="summary-totals">
+                        <div class="total-row">
+                            <span>Subtotal</span>
+                            <span>29.99€</span>
+                        </div>
+                        <div class="total-row">
+                            <span>Envío (Jerez)</span>
+                            <span class="free">GRATIS</span>
+                        </div>
+                        <hr>
+                        <div class="total-row final">
+                            <span>TOTAL</span>
+                            <span>29.99€</span>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <!-- MODAL DE ÉXITO (Oculto inicialmente) -->
+    <div id="success-modal" class="modal">
+        <div class="modal-content">
+            <i class="fas fa-check-circle"></i>
+            <h2>¡Pedido Confirmado!</h2>
+            <p>Gracias por confiar en Flowstage. Tu música va de camino a Jerez.</p>
+            <a href="index.html" class="btn btn-primary">Volver al inicio</a>
+        </div>
+    </div>
+
+    <script src="checkout.js"></script>
+</body>
+</html>

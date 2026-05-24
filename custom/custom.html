@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personalizar Vinilo | Flowstage Studio</title>
+    
+    <!-- Fuentes y Iconos -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Syncopate:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS Global y Específico -->
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="custom.css">
+</head>
+<body>
+
+    <header id="main-header">
+        <div class="container">
+            <nav>
+                <a href="../index.html" class="logo">FLOWSTAGE</a>
+                <ul class="nav-links">
+                    <li><a href="../blog/blog.html">Blog</a></li>
+                    <li><a href="../index.html#tienda">Tienda</a></li>
+                    <li><a href="custom.html" class="active">Personalizar</a></li>
+                    <li><a href="../index.html#contacto">Contacto</a></li>
+                </ul>
+                <div class="nav-icons">
+                    <a href="../checkout.html" class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-badge">0</span>
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container section-padding">
+        <div class="custom-header">
+            <h1 class="main-title">Vinyl <span>Studio</span></h1>
+            <p>Diseña tu edición exclusiva. Sube tu arte y nosotros nos encargamos del resto.</p>
+        </div>
+
+        <div class="studio-grid">
+            <!-- COLUMNA IZQUIERDA: CONTROLES -->
+            <section class="controls-panel">
+                <div class="control-group">
+                    <h3>1. Sube tu Portada</h3>
+                    <div class="upload-area" id="drop-zone">
+                        <input type="file" id="image-input" accept="image/*" hidden>
+                        <label for="image-input" class="upload-label">
+                            <i class="fas fa-cloud-upload-alt"></i>
+                            <span>Seleccionar Imagen</span>
+                            <small>JPG, PNG o WEBP (Máx. 10MB)</small>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <h3>2. Detalles del Disco</h3>
+                    <input type="text" id="album-name" placeholder="Título del Álbum" class="custom-input">
+                    <input type="text" id="artist-name" placeholder="Nombre del Artista" class="custom-input">
+                    
+                    <select class="custom-input">
+                        <option value="black">Vinilo Negro Clásico (180g)</option>
+                        <option value="purple">Púrpura Neón Transparente</option>
+                        <option value="orange">Naranja Marble</option>
+                    </select>
+                </div>
+
+                <div class="price-display">
+                    <span class="label">Precio Estimado:</span>
+                    <span class="value">45.00€</span>
+                </div>
+
+                <button class="btn-confirm" id="add-to-cart">Añadir al Carrito</button>
+            </section>
+
+            <!-- COLUMNA DERECHA: PREVISUALIZACIÓN -->
+            <section class="preview-panel">
+                <div class="vinyl-mockup">
+                    <!-- El disco que sobresale -->
+                    <div class="vinyl-disk" id="vinyl-disk"></div>
+                    <!-- La funda (donde va la imagen) -->
+                    <div class="vinyl-cover" id="cover-preview">
+                        <div class="cover-placeholder">
+                            <i class="fas fa-compact-disc"></i>
+                            <p>Tu diseño aquí</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="preview-info">
+                    <h4 id="preview-album">Título del Álbum</h4>
+                    <p id="preview-artist">Artista</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script>
+        // Lógica de previsualización de imagen
+        const imageInput = document.getElementById('image-input');
+        const coverPreview = document.getElementById('cover-preview');
+        const albumInput = document.getElementById('album-name');
+        const artistInput = document.getElementById('artist-name');
+        const previewAlbum = document.getElementById('preview-album');
+        const previewArtist = document.getElementById('preview-artist');
+
+        imageInput.addEventListener('change', function() {
+            const file = this.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    coverPreview.style.backgroundImage = `url(${e.target.result})`;
+                    coverPreview.innerHTML = ''; // Quitar el placeholder
+                }
+                reader.readAsDataURL(file);
+            }
+        });
+
+        // Actualizar textos en tiempo real
+        albumInput.addEventListener('input', (e) => {
+            previewAlbum.innerText = e.target.value || "Título del Álbum";
+        });
+
+        artistInput.addEventListener('input', (e) => {
+            previewArtist.innerText = e.target.value || "Artista";
+        });
+
+        document.getElementById('add-to-cart').addEventListener('click', () => {
+            alert('¡Diseño guardado! Se ha añadido a tu carrito.');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,200 @@
+/* ESTILOS ESPECÍFICOS DEL CUSTOMIZER */
+
+.custom-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.main-title {
+    font-family: 'Syncopate', sans-serif;
+    font-size: clamp(2rem, 6vw, 3.5rem);
+    text-transform: uppercase;
+    background: linear-gradient(90deg, #fff, var(--accent-purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;
+}
+
+.studio-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 60px;
+    align-items: start;
+}
+
+/* PANEL DE CONTROLES */
+.controls-panel {
+    background: var(--bg-card);
+    padding: 40px;
+    border-radius: 30px;
+    border: 1px solid var(--glass);
+}
+
+.control-group {
+    margin-bottom: 35px;
+}
+
+.control-group h3 {
+    font-family: 'Syncopate', sans-serif;
+    font-size: 0.8rem;
+    color: var(--accent-purple);
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.upload-area {
+    border: 2px dashed #333;
+    border-radius: 15px;
+    padding: 40px;
+    text-align: center;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.upload-area:hover {
+    border-color: var(--accent-purple);
+    background: rgba(168, 85, 247, 0.05);
+}
+
+.upload-label i {
+    font-size: 2.5rem;
+    color: var(--accent-purple);
+    margin-bottom: 15px;
+    display: block;
+}
+
+.upload-label span {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.upload-label small {
+    color: var(--text-dim);
+}
+
+.custom-input {
+    width: 100%;
+    background: #0a0a0a;
+    border: 1px solid #222;
+    padding: 15px;
+    border-radius: 10px;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.price-display {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid var(--glass);
+}
+
+.price-display .value {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--accent-orange);
+}
+
+.btn-confirm {
+    width: 100%;
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 50px;
+    background: var(--accent-purple);
+    color: white;
+    border: none;
+    font-family: 'Syncopate', sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.btn-confirm:hover {
+    box-shadow: 0 0 20px rgba(168, 85, 247, 0.5);
+    transform: translateY(-3px);
+}
+
+/* PANEL DE PREVISUALIZACIÓN */
+.preview-panel {
+    position: sticky;
+    top: 120px;
+    text-align: center;
+}
+
+.vinyl-mockup {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    margin: 0 auto 40px;
+}
+
+/* El disco negro */
+.vinyl-disk {
+    position: absolute;
+    right: -40px;
+    top: 10px;
+    width: 380px;
+    height: 380px;
+    background: radial-gradient(circle, #111 20%, #000 100%);
+    border-radius: 50%;
+    z-index: 1;
+    box-shadow: 0 0 30px rgba(0,0,0,0.8);
+    background-image: repeating-radial-gradient(circle, #111, #111 2px, #080808 4px);
+    animation: rotateVinyl 10s linear infinite;
+}
+
+/* La funda */
+.vinyl-cover {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 400px;
+    height: 400px;
+    background: #151515;
+    z-index: 2;
+    border-radius: 5px;
+    box-shadow: 10px 10px 40px rgba(0,0,0,0.5);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.cover-placeholder {
+    color: #333;
+    text-align: center;
+}
+
+.cover-placeholder i {
+    font-size: 4rem;
+    margin-bottom: 10px;
+}
+
+.preview-info h4 {
+    font-family: 'Syncopate', sans-serif;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.preview-info p {
+    color: var(--accent-purple);
+    font-weight: 700;
+}
+
+@keyframes rotateVinyl {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+    .studio-grid { grid-template-columns: 1fr; }
+    .vinyl-mockup { width: 300px; height: 300px; }
+    .vinyl-disk { width: 280px; height: 280px; right: -30px; }
+    .vinyl-cover { width: 300px; height: 300px; }
+}

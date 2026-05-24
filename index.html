@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flowstage | Vinyl Store & Community</title>
+    
+    <!-- Fuentes y Iconos -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Syncopate:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Vinculación del CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- BARRA DE NAVEGACIÓN -->
+    <header id="main-header">
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">FLOWSTAGE</a>
+                
+                <ul class="nav-links">
+                    <li><a href="blog/blog.html">Blog</a></li>
+                    <li><a href="#tienda">Tienda</a></li>
+                    <li><a href="#personalizar">Personalizar</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+
+                <div class="nav-icons">
+                    <div class="search-trigger" id="searchBtn">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <a href="checkout/checkout.html" class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-badge">0</span>
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- SECCIÓN HERO -->
+    <section class="hero" id="blog">
+        <div class="container">
+            <h1 class="hero-title">The Sound of <span>The Streets</span></h1>
+            
+            <div class="blog-grid">
+                <article class="blog-card">
+                    <img src="Imagenes/palermo_grecas.jpg" class="blog-img" alt="Underground Scene">
+                    <div class="blog-content">
+                        <span class="blog-tag">Comunidad</span>
+                        <h3>Underground Jerez: La nueva ola</h3>
+                        <p class="text-dim">Descubre los artistas locales que están rompiendo moldes este mes.</p>
+                        <a href="#" class="btn btn-primary">Leer más</a>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&q=80&w=800" class="blog-img" alt="Vinyl Culture">
+                    <div class="blog-content">
+                        <span class="blog-tag">Cultura</span>
+                        <h3>¿Por qué el vinilo nunca muere?</h3>
+                        <p class="text-dim">Hablamos con coleccionistas sobre la magia del formato físico.</p>
+                        <a href="#" class="btn btn-primary">Participar</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN SHOWCASE (TU IMAGEN AQUÍ) -->
+    <section class="showcase-section">
+        <div class="container">
+            <div class="image-container">
+                <!-- Imagen representativa de la marca -->
+                <img src="Imagenes/banner.png" alt="Flowstage Lifestyle">
+                <div class="image-overlay">
+                    <span class="overlay-tag">ESTILO DE VIDA</span>
+                    <h2>The Flowstage Vibe</h2>
+                    <p>No es solo una tienda, es el punto de encuentro de la cultura urbana en Jerez.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN TIENDA -->
+    <section class="section-padding" id="tienda">
+        <div class="container">
+            <h2 class="section-title">Drops Recientes</h2>
+
+            <div class="shop-grid">
+                <div class="product-card">
+                    <div class="vinyl-wrapper">
+                        <img src=Imagenes/corsa_eladio.jpg class="vinyl-img" alt="Vinyl 1">
+                    </div>
+                    <h4>Corsa - Eladio Carrión</h4>
+                    <p class="price">29.99€</p>
+                    <button class="btn btn-add">Añadir</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="vinyl-wrapper">
+                        <img src="Imagenes/el_baifo_quevedo.png" class="vinyl-img" alt="Vinyl 2">
+                    </div>
+                    <h4>El Baifo - Quevedo</h4>
+                    <p class="price">32.50€</p>
+                    <button class="btn btn-add">Añadir</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="vinyl-wrapper">
+                        <img src="Imagenes/omerta_jbalvin.webp" class="vinyl-img" alt="Vinyl 3">
+                    </div>
+                    <h4>OMERTA - J Balvin y Ryan Castro</h4>
+                    <p class="price">25.00€</p>
+                    <button class="btn btn-add">Añadir</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="vinyl-wrapper">
+                        <img src="Imagenes/pop rock - melendi.jpg" class="vinyl-img" alt="Vinyl 4">
+                    </div>
+                    <h4>Pop Rock - Melendi</h4>
+                    <p class="price">28.95€</p>
+                    <button class="btn btn-add">Añadir</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN PERSONALIZACIÓN -->
+    <section class="container" id="personalizar">
+        <div class="custom-section">
+            <h2 class="cta-title">Crea tu propia joya</h2>
+            <p class="cta-text">Prensado personalizado de vinilos. Calidad profesional desde Jerez para el mundo.</p>
+            <a href="custom/custom.html" class="btn btn-custom">Personalizar Vinilo</a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="contacto">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <span class="logo">FLOWSTAGE</span>
+                    <p class="text-dim">Calle Larga, 12. Jerez de la Frontera.<br>Tu templo del vinilo.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                        <a href="#"><i class="fab fa-spotify"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-nav">
+                    <h4>Explora</h4>
+                    <ul>
+                        <li><a href="#">Envíos</a></li>
+                        <li><a href="#">Garantía</a></li>
+                        <li><a href="#">Comunidad</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-newsletter">
+                    <h4>Newsletter</h4>
+                    <form id="newsletter-form">
+                        <input type="email" placeholder="Tu email" required>
+                        <button type="submit" class="btn btn-primary">Unirme</button>
+                    </form>
+                </div>
+            </div>
+            <p class="copyright">&copy; 2026 FLOWSTAGE. URBAN MUSIC CULTURE.</p>
+        </div>
+    </footer>
+
+    <!-- Vinculación del JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

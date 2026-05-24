@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flowstage Blog | Cultura Musical Urbana</title>
+    
+    <!-- Fuentes y Iconos -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Syncopate:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Vinculamos el CSS global (subiendo un nivel) y el específico del blog -->
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="blog.css">
+</head>
+<body>
+
+    <!-- HEADER (Igual al principal, ajustando rutas) -->
+    <header id="main-header">
+        <div class="container">
+            <nav>
+                <a href="../index.html" class="logo">FLOWSTAGE</a>
+                <ul class="nav-links">
+                    <li><a href="blog.html" class="active">Blog</a></li>
+                    <li><a href="../index.html#tienda">Tienda</a></li>
+                    <li><a href="../index.html#personalizar">Personalizar</a></li>
+                    <li><a href="../index.html#contacto">Contacto</a></li>
+                </ul>
+                <div class="nav-icons">
+                    <div class="search-trigger"><i class="fas fa-search"></i></div>
+                    <a href="../checkout.html" class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-badge">0</span>
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO BLOG -->
+    <section class="blog-hero">
+        <div class="container">
+            <span class="subtitle">Flowstage Magazine</span>
+            <h1 class="main-title">The Sound of <span>The Streets</span></h1>
+            <p class="hero-desc">Explora las últimas tendencias, reseñas de vinilos y la escena underground de Jerez.</p>
+        </div>
+    </section>
+
+    <!-- CATEGORÍAS -->
+    <div class="container">
+        <div class="categories-bar">
+            <button class="cat-btn active">Todo</button>
+            <button class="cat-btn">Reseñas</button>
+            <button class="cat-btn">Entrevistas</button>
+            <button class="cat-btn">Eventos</button>
+            <button class="cat-btn">Cultura Vinilo</button>
+        </div>
+    </div>
+
+    <!-- GRID DE ARTÍCULOS -->
+    <main class="container section-padding">
+        <div class="blog-main-grid">
+            
+            <!-- Artículo Destacado (Ancho completo) -->
+            <article class="post-card featured">
+                <div class="post-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1493225255756-d9584f8606e9?auto=format&fit=crop&q=80&w=1200" alt="Post">
+                </div>
+                <div class="post-content">
+                    <span class="post-tag">Especial</span>
+                    <h2>El renacimiento del Flamenco-Fusion en los tabancos de Jerez</h2>
+                    <p>Analizamos cómo la nueva generación de artistas jerezanos está mezclando el vinilo con las raíces más puras...</p>
+                    <div class="post-footer">
+                        <span>Por Flowstage Team</span>
+                        <a href="#" class="read-more">Leer Artículo →</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Artículos Normales -->
+            <article class="post-card">
+                <img src="https://images.unsplash.com/photo-1603048588665-791ca8aea617?auto=format&fit=crop&q=80&w=600" alt="Techno">
+                <div class="post-content">
+                    <span class="post-tag">Reviews</span>
+                    <h3>Top 5: Joyas del Techno para este Invierno</h3>
+                    <p>Nuestra selección de los 12" que no pueden faltar en tu maleta este mes.</p>
+                    <a href="#" class="read-more">Leer más</a>
+                </div>
+            </article>
+
+            <article class="post-card">
+                <img src="https://images.unsplash.com/photo-1545128485-c400e7702796?auto=format&fit=crop&q=80&w=600" alt="Limpieza">
+                <div class="post-content">
+                    <span class="post-tag">Cultura</span>
+                    <h3>Guía definitiva: Mantenimiento de Agujas</h3>
+                    <p>No dejes que el polvo arruine tu sonido. Todo lo que necesitas saber.</p>
+                    <a href="#" class="read-more">Leer más</a>
+                </div>
+            </article>
+
+            <article class="post-card">
+                <img src="../Imagenes/foto studio.jpg" alt="Tienda">
+                <div class="post-content">
+                    <span class="post-tag">Eventos</span>
+                    <h3>Flowstage Sessions Vol. 4: Galería de fotos</h3>
+                    <p>Así vivimos el último set en directo en nuestra tienda de Calle Larga.</p>
+                    <a href="#" class="read-more">Ver Galería</a>
+                </div>
+            </article>
+
+        </div>
+    </main>
+
+    <!-- NEWSLETTER (Reutilizada de la home) -->
+    <section class="blog-newsletter">
+        <div class="container">
+            <div class="newsletter-box">
+                <h2>No te pierdas ningún <span>Drop</span></h2>
+                <p>Suscríbete para recibir noticias exclusivas y lanzamientos limitados.</p>
+                <form class="blog-form">
+                    <input type="email" placeholder="Tu correo electrónico">
+                    <button type="submit" class="btn-blog">Suscribirme</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER (Igual al principal) -->
+    <footer>
+        <div class="container">
+            <p style="text-align: center; color: var(--text-dim); font-size: 0.8rem;">&copy; 2024 FLOWSTAGE JEREZ. URBAN CULTURE MAGAZINE.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

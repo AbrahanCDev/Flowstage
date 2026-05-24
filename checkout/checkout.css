@@ -1,0 +1,294 @@
+/* TÍTULO PRINCIPAL (Finalizar Compra) */
+h1.section-title {
+    font-family: 'Syncopate', sans-serif;
+    font-size: clamp(1.8rem, 5vw, 2.8rem); /* Tamaño responsivo */
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    margin-bottom: 40px;
+    /* Degradado igual al logo de la home */
+    background: linear-gradient(90deg, #fff, var(--accent-purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* TÍTULOS DE LAS CAJAS (1. Datos de Envío, 2. Pago Simulado) */
+.form-group h3 {
+    font-family: 'Syncopate', sans-serif;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--accent-purple); /* Color de acento */
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+}
+
+/* TÍTULO DEL RESUMEN (Caja derecha) */
+.summary-card h3 {
+    font-family: 'Syncopate', sans-serif;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #fff;
+    border-bottom: 1px solid var(--glass);
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+}
+
+input {
+    font-family: 'Inter', sans-serif; /* Texto de lectura limpio */
+    background: #0d0d0d;
+    border: 1px solid #222;
+    padding: 15px;
+    border-radius: 8px;
+    color: white;
+    transition: var(--transition);
+}
+
+input:focus {
+    border-color: var(--accent-purple);
+    background: #111;
+    box-shadow: 0 0 10px rgba(168, 85, 247, 0.2);
+    outline: none;
+}
+
+/* Estilo para los placeholders (el texto sugerido) */
+input::placeholder {
+    color: #444;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+}
+
+/* Estilos específicos para Checkout */
+.checkout-page {
+    background: gray;
+}
+
+.back-link {
+    color: var(--text-dim);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.checkout-grid {
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    gap: 50px;
+    margin-top: 40px;
+}
+
+.form-group {
+    background: var(--bg-card);
+    padding: 30px;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    border: 1px solid var(--glass);
+}
+
+.form-group h3 {
+    margin-bottom: 25px;
+    font-size: 1.2rem;
+    color: var(--accent-purple);
+}
+
+.input-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+input {
+    width: 100%;
+    background: #0a0a0a;
+    border: 1px solid #333;
+    padding: 15px;
+    border-radius: 8px;
+    color: white;
+    margin-bottom: 15px;
+    font-family: 'Inter', sans-serif;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--accent-purple);
+}
+
+/* 1. Contenedor principal del pago */
+.payment-box {
+    background: #1a1a1a;
+    padding: 20px;
+    border-radius: 12px;
+    width: 100%; /* Asegura que no se pase del ancho del padre */
+    box-sizing: border-box;
+}
+
+/* 2. Ajuste de las filas de input */
+.payment-box .input-row {
+    display: grid;
+    grid-template-columns: 1fr 100px; /* El CVC tendrá siempre 100px de ancho */
+    gap: 15px;
+    width: 100%;
+    margin-top: 15px; /* Separación con el número de tarjeta */
+}
+
+/* 3. ¡IMPORTANTE! Quitar márgenes que empujan la caja hacia afuera */
+.payment-box input {
+    margin-bottom: 0 !important; /* Quita el margen de 15px que pusimos globalmente */
+    width: 100%;
+    box-sizing: border-box; /* Evita que el padding sume ancho extra */
+}
+
+/* 4. Estilo específico para el número de tarjeta (el de arriba) */
+.card-input {
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.card-input input {
+    padding-left: 45px; /* Espacio para el icono de la tarjeta */
+}
+
+/* BOTÓN DE CONFIRMACIÓN (Estilo Flowstage) */
+.btn-large {
+    width: 100%;
+    padding: 20px;
+    margin-top: 20px;
+    
+    /* Formato idéntico a la Home */
+    font-family: 'Syncopate', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    
+    background: var(--accent-purple);
+    color: white;
+    border: none;
+    border-radius: 50px; /* Redondeado total como en la principal */
+    cursor: pointer;
+    transition: var(--transition);
+    
+    /* Sombra inicial sutil */
+    box-shadow: 0 4px 15px rgba(168, 85, 247, 0.3);
+}
+
+/* EFECTO HOVER (Al pasar el ratón) */
+.btn-large:hover {
+    transform: translateY(-3px); /* Se eleva un poco */
+    background: #b566ff; /* Un púrpura un poco más claro */
+    box-shadow: 0 0 25px rgba(168, 85, 247, 0.6); /* Brillo neón */
+}
+
+/* EFECTO ACTIVE (Al hacer click) */
+.btn-large:active {
+    transform: translateY(-1px);
+}
+
+/* Estilo para cuando el botón está deshabilitado (Procesando...) */
+.btn-large:disabled {
+    background: #333;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+/* CAJA DEL RESUMEN DEL PEDIDO */
+.summary-card {
+    background: var(--bg-card); /* Usamos el gris oscuro de las tarjetas */
+    padding: 30px;
+    border-radius: 20px;
+    border: 1px solid var(--accent-purple); /* Borde neón para que resalte */
+    position: sticky;
+    top: 120px; /* Se queda pegado al hacer scroll */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Sombra para dar profundidad */
+}
+
+/* Título dentro de la caja */
+.summary-card h3 {
+    margin-bottom: 25px;
+    font-size: 1.1rem;
+    border-bottom: 1px solid var(--glass);
+    padding-bottom: 15px;
+    color: white;
+}
+
+/* Contenedor de los productos dentro de la caja */
+.cart-items {
+    margin-bottom: 25px;
+}
+
+/* Fila de totales */
+.summary-totals {
+    background: rgba(0, 0, 0, 0.2); /* Un fondo un poco más oscuro para los totales */
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.total-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    color: var(--text-dim);
+}
+
+.total-row.final {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid var(--glass);
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: white;
+}
+
+.total-row span.free {
+    color: #22c55e; /* Color verde para el envío gratis */
+    font-weight: 700;
+}
+
+.free { color: #22c55e; font-weight: 700; }
+
+.final {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-top: 20px;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.9);
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: var(--bg-card);
+    padding: 50px;
+    border-radius: 30px;
+    text-align: center;
+    max-width: 400px;
+    border: 1px solid var(--accent-purple);
+}
+
+.modal-content i {
+    font-size: 4rem;
+    color: #22c55e;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 992px) {
+    .checkout-grid { grid-template-columns: 1fr; }
+}
+/* Solo afecta a la fila que está dentro de la caja de pago */
+.payment-box .input-row {
+    grid-template-columns: 3fr 1fr; /* Aquí el CVC será aún más pequeño (25% del total) */
+}
