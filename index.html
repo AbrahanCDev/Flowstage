@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flowstage | Vinyl Store & Community</title>
-    
+
     <!-- Fuentes y Iconos -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Syncopate:wght@400;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Syncopate:wght@400;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <!-- Vinculación del CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
     <!-- BARRA DE NAVEGACIÓN -->
@@ -19,7 +23,7 @@
         <div class="container">
             <nav>
                 <a href="#" class="logo">FLOWSTAGE</a>
-                
+
                 <ul class="nav-links">
                     <li><a href="blog/blog.html">Blog</a></li>
                     <li><a href="#tienda">Tienda</a></li>
@@ -44,7 +48,7 @@
     <section class="hero" id="blog">
         <div class="container">
             <h1 class="hero-title">The Sound of <span>The Streets</span></h1>
-            
+
             <div class="blog-grid">
                 <article class="blog-card">
                     <img src="Imagenes/palermo_grecas.jpg" class="blog-img" alt="Underground Scene">
@@ -52,17 +56,18 @@
                         <span class="blog-tag">Comunidad</span>
                         <h3>Underground Jerez: La nueva ola</h3>
                         <p class="text-dim">Descubre los artistas locales que están rompiendo moldes este mes.</p>
-                        <a href="#" class="btn btn-primary">Leer más</a>
+                        <a href="blog/blog.html" class="btn btn-primary">Leer más</a>
                     </div>
                 </article>
 
                 <article class="blog-card">
-                    <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&q=80&w=800" class="blog-img" alt="Vinyl Culture">
+                    <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&q=80&w=800"
+                        class="blog-img" alt="Vinyl Culture">
                     <div class="blog-content">
                         <span class="blog-tag">Cultura</span>
                         <h3>¿Por qué el vinilo nunca muere?</h3>
                         <p class="text-dim">Hablamos con coleccionistas sobre la magia del formato físico.</p>
-                        <a href="#" class="btn btn-primary">Participar</a>
+                        <a href="blog/blog.html" class="btn btn-primary">Participar</a>
                     </div>
                 </article>
             </div>
@@ -92,11 +97,12 @@
             <div class="shop-grid">
                 <div class="product-card">
                     <div class="vinyl-wrapper">
-                        <img src=Imagenes/corsa_eladio.jpg class="vinyl-img" alt="Vinyl 1">
+                        <img src="Imagenes/corsa_eladio.jpg" class="vinyl-img" alt="Vinyl 1">
                     </div>
                     <h4>Corsa - Eladio Carrión</h4>
                     <p class="price">29.99€</p>
-                    <button class="btn btn-add">Añadir</button>
+                    <button class="btn btn-add" data-title="Corsa - Eladio Carrión" data-price="29.99"
+                        data-img="Imagenes/corsa_eladio.jpg">Añadir</button>
                 </div>
 
                 <div class="product-card">
@@ -105,7 +111,8 @@
                     </div>
                     <h4>El Baifo - Quevedo</h4>
                     <p class="price">32.50€</p>
-                    <button class="btn btn-add">Añadir</button>
+                    <button class="btn btn-add" data-title="El Baifo - Quevedo" data-price="32.50"
+                        data-img="Imagenes/el_baifo_quevedo.png">Añadir</button>
                 </div>
 
                 <div class="product-card">
@@ -114,7 +121,8 @@
                     </div>
                     <h4>OMERTA - J Balvin y Ryan Castro</h4>
                     <p class="price">25.00€</p>
-                    <button class="btn btn-add">Añadir</button>
+                    <button class="btn btn-add" data-title="OMERTA - J Balvin y Ryan Castro" data-price="25.00"
+                        data-img="Imagenes/omerta_jbalvin.webp">Añadir</button>
                 </div>
 
                 <div class="product-card">
@@ -123,7 +131,8 @@
                     </div>
                     <h4>Pop Rock - Melendi</h4>
                     <p class="price">28.95€</p>
-                    <button class="btn btn-add">Añadir</button>
+                    <button class="btn btn-add" data-title="Pop Rock - Melendi" data-price="28.95"
+                        data-img="Imagenes/pop rock - melendi.jpg">Añadir</button>
                 </div>
             </div>
         </div>
@@ -176,4 +185,5 @@
     <!-- Vinculación del JavaScript -->
     <script src="script.js"></script>
 </body>
+
 </html>

@@ -12,17 +12,33 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // 2. Simulación de Carrito
+    // 2. Gestión Real de Carrito con LocalStorage
     const addButtons = document.querySelectorAll('.btn-add');
     const cartBadge = document.querySelector('.cart-badge');
-    let cartCount = 0;
+    
+    // Recuperamos el carrito que ya exista o creamos uno vacío si es la primera vez
+    let cart = JSON.parse(localStorage.getItem('flowstage_cart')) || [];
+    
+    // Sincronizar el número del badge al cargar la página
+    cartBadge.innerText = cart.length;
 
     addButtons.forEach(button => {
         button.addEventListener('click', () => {
-            cartCount++;
-            cartBadge.innerText = cartCount;
+            // Capturamos los datos del atributo data del botón
+            const title = button.getAttribute('data-title');
+            const price = parseFloat(button.getAttribute('data-price'));
+            const img = button.getAttribute('data-img');
 
-            // Feedback visual simple
+            // Añadimos el disco seleccionado al array del carrito
+            cart.push({ title, price, img });
+
+            // Guardamos la lista actualizada en LocalStorage convirtiéndola a texto JSON
+            localStorage.setItem('flowstage_cart', JSON.stringify(cart));
+
+            // Actualizamos el número del contador visual
+            cartBadge.innerText = cart.length;
+
+            // Feedback visual clásico que tenías
             button.innerText = '¡Añadido!';
             button.style.borderColor = 'var(--accent-orange)';
 
